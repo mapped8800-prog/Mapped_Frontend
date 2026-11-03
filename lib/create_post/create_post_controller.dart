@@ -164,21 +164,21 @@ class CreatePostController extends GetxController {
           }
 
           final fileSize = await image.length();
-          if (fileSize > maxImageSizeBytes) {
-            Get.snackbar(
-              'snackbar_size_title'.tr(),
-              'snackbar_size_msg'.tr(
-                namedArgs: {
-                  'max': maxImageSizeMB.toString(),
-                  'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
-                },
-              ),
-              backgroundColor: Colors.red,
-              colorText: Colors.white,
-              duration: const Duration(seconds: 3),
-            );
-            continue;
-          }
+          // if (fileSize > maxImageSizeBytes) {
+          //   Get.snackbar(
+          //     'snackbar_size_title'.tr(),
+          //     'snackbar_size_msg'.tr(
+          //       namedArgs: {
+          //         'max': maxImageSizeMB.toString(),
+          //         'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
+          //       },
+          //     ),
+          //     backgroundColor: Colors.red,
+          //     colorText: Colors.white,
+          //     duration: const Duration(seconds: 3),
+          //   );
+          //   continue;
+          // }
           selectedImages.add(image);
         }
       }
@@ -203,21 +203,21 @@ class CreatePostController extends GetxController {
       final XFile? image = await _picker.pickImage(source: ImageSource.camera);
       if (image != null) {
         final fileSize = await image.length();
-        if (fileSize > maxImageSizeBytes) {
-          Get.snackbar(
-            'snackbar_size_title'.tr(),
-            'snackbar_size_msg'.tr(
-              namedArgs: {
-                'max': maxImageSizeMB.toString(),
-                'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
-              },
-            ),
-            backgroundColor: Colors.red,
-            colorText: Colors.white,
-            duration: const Duration(seconds: 3),
-          );
-          return;
-        }
+        // if (fileSize > maxImageSizeBytes) {
+        //   Get.snackbar(
+        //     'snackbar_size_title'.tr(),
+        //     'snackbar_size_msg'.tr(
+        //       namedArgs: {
+        //         'max': maxImageSizeMB.toString(),
+        //         'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
+        //       },
+        //     ),
+        //     backgroundColor: Colors.red,
+        //     colorText: Colors.white,
+        //     duration: const Duration(seconds: 3),
+        //   );
+        //   return;
+        // }
         selectedImages.add(image);
       }
     } catch (e) {

@@ -109,21 +109,21 @@ class CreateResourceController extends GetxController {
 
           // Check file size
           final fileSize = await image.length();
-          if (fileSize > maxImageSizeBytes) {
-            Get.snackbar(
-              'snackbar_size_title'.tr(),
-              'snackbar_size_msg'.tr(
-                namedArgs: {
-                  'max': maxImageSizeMB.toString(),
-                  'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
-                },
-              ),
-              backgroundColor: Colors.red,
-              colorText: Colors.white,
-              duration: const Duration(seconds: 3),
-            );
-            continue;
-          }
+          // if (fileSize > maxImageSizeBytes) {
+          //   Get.snackbar(
+          //     'snackbar_size_title'.tr(),
+          //     'snackbar_size_msg'.tr(
+          //       namedArgs: {
+          //         'max': maxImageSizeMB.toString(),
+          //         'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
+          //       },
+          //     ),
+          //     backgroundColor: Colors.red,
+          //     colorText: Colors.white,
+          //     duration: const Duration(seconds: 3),
+          //   );
+          //   continue;
+          // }
 
           selectedImages.add(image);
         }
@@ -149,21 +149,21 @@ class CreateResourceController extends GetxController {
       if (image != null) {
         // Check file size
         final fileSize = await image.length();
-        if (fileSize > maxImageSizeBytes) {
-          Get.snackbar(
-            'snackbar_size_title'.tr(),
-            'snackbar_size_msg'.tr(
-              namedArgs: {
-                'max': maxImageSizeMB.toString(),
-                'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
-              },
-            ),
-            backgroundColor: Colors.red,
-            colorText: Colors.white,
-            duration: const Duration(seconds: 3),
-          );
-          return;
-        }
+        // if (fileSize > maxImageSizeBytes) {
+        //   Get.snackbar(
+        //     'snackbar_size_title'.tr(),
+        //     'snackbar_size_msg'.tr(
+        //       namedArgs: {
+        //         'max': maxImageSizeMB.toString(),
+        //         'size': (fileSize / 1024 / 1024).toStringAsFixed(2),
+        //       },
+        //     ),
+        //     backgroundColor: Colors.red,
+        //     colorText: Colors.white,
+        //     duration: const Duration(seconds: 3),
+        //   );
+        //   return;
+        // }
 
         selectedImages.add(image);
       }
