@@ -7,13 +7,12 @@ import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:mapped_frontend/controller/user_controller';
+import 'package:mapped_frontend/services/api_service.dart';
 import 'profile_editor_model.dart';
 
 class ProfileEditorController extends GetxController {
   // Configuration
-  final String baseUrl = kIsWeb
-      ? "http://localhost:5000"
-      : "https://mapped-backend-node-js-ce6r.onrender.com";
+  final String baseUrl = ApiService().baseUrl;
 
   // Form key for validation
   final formKey = GlobalKey<FormState>();

@@ -7,9 +7,6 @@ import 'recommendation_model.dart';
 class RecommendationService {
   // Update this to your actual API URL
   final ApiService _apiService = ApiService();
-  // For Android emulator: 'https://mapped-backend-node-js-ce6r.onrender.com/api/recommendations'
-  // For iOS simulator: 'http://localhost:5000/api/recommendations'
-  // For production: 'https://your-domain.com/api/recommendations'
 
   /// Generate a new recommendation
   Future<SessionRecommendation?> generateRecommendation(

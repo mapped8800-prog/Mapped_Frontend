@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Trans;
 import 'package:easy_localization/easy_localization.dart';
 import 'package:mapped_frontend/admin/admin_controller.dart';
+import 'package:mapped_frontend/services/api_service.dart';
 
 class AdminAccountScreen extends StatelessWidget {
   const AdminAccountScreen({super.key});
@@ -49,7 +50,7 @@ class AdminAccountScreen extends StatelessWidget {
                           (controller.reportedPosts.isNotEmpty &&
                               controller.reportedPosts[0].authorImage != null)
                           ? NetworkImage(
-                              "https://mapped-backend-node-js-ce6r.onrender.com/api/${controller.reportedPosts[0].authorImage}",
+                              "${ApiService().baseUrl}${controller.reportedPosts[0].authorImage}",
                             )
                           : null,
                     ),

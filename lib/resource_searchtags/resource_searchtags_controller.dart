@@ -5,13 +5,12 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:easy_localization/easy_localization.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mapped_frontend/services/api_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'resource_searchtags_model.dart';
 
 class ResourceSearchtagsController extends GetxController {
-  final String baseUrl = kIsWeb
-      ? "http://localhost:5000"
-      : "https://mapped-backend-node-js-ce6r.onrender.com";
+  final String baseUrl = ApiService().baseUrl;
 
   // 1. Dynamic User ID
   String currentUserId = '';

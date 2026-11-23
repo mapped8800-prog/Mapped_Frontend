@@ -12,9 +12,7 @@ import '../TProgress/belt_progress_ring_controller.dart';
 
 class ResourceController extends GetxController {
   // CONFIGURATION
-  final String baseUrl = kIsWeb
-      ? "http://localhost:5000"
-      : "https://mapped-backend-node-js-ce6r.onrender.com";
+  final String baseUrl = ApiService().baseUrl;
 
   final ApiService _apiService = ApiService();
 
